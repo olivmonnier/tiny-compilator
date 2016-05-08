@@ -1,9 +1,12 @@
 var Handlebars = require('handlebars');
-var loadContents = require('./lib/loadContents');
+var loadHelpers = require('loadHelpers');
+var loadLayouts = require('loadLayouts');
+var loadPartials = require('loadPartials');
 
 module.exports = function (options) {
-  var layouts = loadContents(options.layouts);
-  var helpers = loadContents(options.helpers);
-  var pages = loadContents(options.pages);
-  var partials = loadContents(options.partials);
+  this.Handlebars = Handlebars;
+  this.loadHelpers = loadHelpers;
+  this.loadLayouts = loadLayouts;
+  this.loadPartials = loadPartials;
+  this.options = options;
 }
