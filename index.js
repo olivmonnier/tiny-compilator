@@ -1,12 +1,10 @@
-var Handlebars = require('handlebars');
-var loadHelpers = require('loadHelpers');
-var loadLayouts = require('loadLayouts');
-var loadPartials = require('loadPartials');
-
 module.exports = function (options) {
-  this.Handlebars = Handlebars;
-  this.loadHelpers = loadHelpers;
-  this.loadLayouts = loadLayouts;
-  this.loadPartials = loadPartials;
+  this.datas = options.datas || {};
+  this.Handlebars = require('handlebars');
+  this.loadHelpers = require('./lib/loadHelpers')();
+  this.loadLayouts = require('./lib/loadLayouts')();
+  this.loadPartials = require('./lib/loadPartials')();
   this.options = options;
+
+  return require('./lib/render');
 }
