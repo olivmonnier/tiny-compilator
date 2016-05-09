@@ -20,8 +20,8 @@ function Compilator (options) {
   this.layouts = [];
   this.options = options;
 
-  this.loadLayouts();
   this.loadHelpers();
+  this.loadLayouts();
   this.loadPartials();
 }
 

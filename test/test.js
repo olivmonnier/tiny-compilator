@@ -47,6 +47,7 @@ describe('Compilation works', function () {
 
   it('return html elements after run render method', function (done) {
     var c = new Compilator({
+      helpers: 'test/fixtures/helpers',
       layouts: 'test/fixtures/layouts/',
       partials: 'test/fixtures/partials/',
       datas: {
@@ -55,7 +56,7 @@ describe('Compilation works', function () {
     });
     var page = c.render('test/fixtures/pages/test.hbs');
 
-    expect(page).to.equal('<h1>Hello World</h1>\r\n<h2>Hello Everyone</h2>\r\n\n');
+    expect(page).to.equal('<h1>Hello World</h1>\r\n<h2>HELLO EVERYONE</h2>\r\n\n');
     done();
   });
 });
