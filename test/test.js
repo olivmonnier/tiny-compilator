@@ -2,6 +2,7 @@ var assert = require('chai').assert;
 var expect = require('chai').expect;
 var loadFiles = require('../lib/loadFiles');
 var loadContents = require('../lib/loadContents');
+var Compilator = require('../index');
 
 describe('Load Files', function () {
   it('return a list of files', function (done) {
@@ -31,7 +32,30 @@ describe('Load content in folder', function () {
     var contents = loadContents('test/fixtures/layouts');
 
     assert.isString(contents[0].content, 'Return a string');
-    expect(contents[0].content).to.equal('<h1>Hello World</h1>\r\n<h2>{{ title }}</h2>\r\n');
+    expect(contents[0].content).to.equal('<h1>Hello World</h1>\r\n{{> body }}\r\n');
+    done();
+  });
+});
+
+describe('Compilation works', function () {
+  it('return instance of Compilator', function (done) {
+    var c = new Compilator();
+
+    assert.instanceOf(c, Compilator, 'Return an instance');
+    done();
+  });
+
+  it('return html elements after run render method', function (done) {
+    var c = new Compilator({
+      layouts: 'test/fixtures/layouts/',
+      partials: 'test/fixtures/partials/',
+      datas: {
+        title: 'Hello Everyone'
+      }
+    });
+    var page = c.render('test/fixtures/pages/test.hbs');
+
+    expect(page).to.equal('<h1>Hello World</h1>\r\n<h2>Hello Everyone</h2>\r\n\n');
     done();
   });
 });
