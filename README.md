@@ -1,15 +1,17 @@
-# Compilator
+# tiny-compilator
 
 Build your stack with Handlebars.js for create static pages. It must be useful with Express.js for return the html view after a http request.
 
 ## How to install
 ```terminal
-npm install --save compilator
+npm install --save tiny-compilator
 ```
 
 ## How it works
 Create a Compilator instance with in arguments the different paths to layouts, helpers & partials folders. Then call render method of your instance with the path of your page and datas to pass:
 ```javascript
+var Compilator = require('tiny-compilator');
+
 var compile = new Compilator({
   helpers: 'path/to/helper/folder',
   layouts: 'path/to/layout/folder',
