@@ -2,6 +2,9 @@
 
 Build your stack with Handlebars.js for create static pages. It must be useful with Express.js for return the html view after a http request.
 
+![release](https://img.shields.io/badge/release-1.0.0-blue.svg)
+[![travis](https://travis-ci.org/olivmonnier/tiny-compilator.svg)](https://travis-ci.org/olivmonnier/tiny-compilator)
+
 ## How to install
 ```terminal
 npm install --save tiny-compilator
