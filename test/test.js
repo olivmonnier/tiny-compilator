@@ -49,12 +49,11 @@ describe('Compilation works', function () {
     var c = new Compilator({
       helpers: 'test/fixtures/helpers',
       layouts: 'test/fixtures/layouts/',
-      partials: 'test/fixtures/partials/',
-      datas: {
-        title: 'Hello Everyone'
-      }
+      partials: 'test/fixtures/partials/'
     });
-    var page = c.render('test/fixtures/pages/test.hbs');
+    var page = c.render('test/fixtures/pages/test.hbs', {
+      title: 'Hello Everyone'
+    });
 
     expect(page).to.equal('<h1>Hello World</h1>\r\n<h2>HELLO EVERYONE</h2>\r\n\n');
     done();

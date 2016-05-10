@@ -15,7 +15,6 @@
 * var page = c.render('pages/test.hbs'); => html elements
 */
 function Compilator (options) {
-  this.datas = (options && options.datas) || {};
   this.Handlebars = require('handlebars');
   this.layouts = [];
   this.options = options;
