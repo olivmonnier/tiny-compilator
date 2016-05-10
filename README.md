@@ -18,7 +18,7 @@ var compile = new Compilator({
   partials: 'path/to/partials/folder'
 });
 
-compile.render('path/to/your/page', ObjectDatas); => html compiled
+compile.render('path/to/your/page', ObjectDatas); => return html compiled
 ```
 
 ## Page configuration
