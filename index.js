@@ -4,15 +4,14 @@
 * @return {Object}
 *
 * @example:
-* var c = new Compilator({
-*   datas: {
-*     title: 'Hello Everyone'
-*   },
+* var compile = new Compilator({
 *   helpers: 'helpers/',
 *   layouts: 'layouts/',
 *   partials: 'partials/'
 * });
-* var page = c.render('pages/test.hbs'); => html elements
+* compile.render('pages/test.hbs', {
+*   title: 'Hello Evryone'
+* }); => return html elements
 */
 function Compilator (options) {
   this.Handlebars = require('handlebars');
