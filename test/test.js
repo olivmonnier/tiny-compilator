@@ -32,7 +32,7 @@ describe('Load content in folder', function () {
     var contents = loadContents('test/fixtures/layouts');
 
     assert.isString(contents[0].content, 'Return a string');
-    expect(contents[0].content).to.equal('<h1>Hello World</h1>\r\n{{> body }}\r\n');
+    expect(contents[0].content).to.equal('<h1>Hello World</h1>\n{{> body }}\n');
     done();
   });
 });
@@ -55,7 +55,7 @@ describe('Compilation works', function () {
       title: 'Hello Everyone'
     });
 
-    expect(page).to.equal('<h1>Hello World</h1>\r\n<h2>HELLO EVERYONE</h2>\r\n\n');
+    expect(page).to.equal('<h1>Hello World</h1>\n<h2>HELLO EVERYONE</h2>\n\n');
     done();
   });
 });
