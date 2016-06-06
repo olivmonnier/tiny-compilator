@@ -1,6 +1,6 @@
 {
   "name": "tiny-compilator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Build your stack with Handlebars.js for create static pages. It must be useful with Express.js for return the html view after a http request.",
   "main": "index.js",
   "scripts": {
