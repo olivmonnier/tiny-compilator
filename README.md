@@ -11,7 +11,7 @@ npm install tiny-compilator
 ```
 
 ## How it works
-Create a Compilator instance with in arguments the paths of layouts, helpers & partials folders. Then call render method of your instance with the path of your page and datas to pass:
+Create a Compilator instance with in arguments the paths of layouts, helpers & partials folders. Then call render method of your instance with the path of your page and data to pass:
 ```javascript
 var Compilator = require('tiny-compilator');
 
@@ -21,7 +21,7 @@ var compile = new Compilator({
   partials: 'path/to/partials/folder'
 });
 
-compile.render('path/to/your/page', ObjectDatas); //=> return html compiled
+compile.render('path/to/your/page', data); //=> return html compiled
 ```
 
 ## Page configuration
