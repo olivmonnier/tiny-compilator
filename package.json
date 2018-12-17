@@ -9,9 +9,9 @@
   "author": "oliv75",
   "license": "ISC",
   "keywords": [
-      "compile",
-      "handlebars",
-      "static"
+    "compile",
+    "handlebars",
+    "static"
   ],
   "repository": {
     "type": "git",
@@ -21,11 +21,11 @@
     "url": "https://github.com/olivmonnier/tiny-compilator/issues"
   },
   "dependencies": {
-    "front-matter": "^2.0.7",
-    "handlebars": "^4.0.5"
+    "front-matter": "^2.3.0",
+    "handlebars": "^4.0.12"
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.4.5"
+    "mocha": "^5.2.0"
   }
 }
