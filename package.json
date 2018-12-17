@@ -1,7 +1,7 @@
 {
   "name": "tiny-compilator",
-  "version": "1.0.1",
-  "description": "Build your stack with Handlebars.js for create static pages. It must be useful with Express.js for return the html view after a http request.",
+  "version": "1.0.2",
+  "description": "Build your stack with Handlebars.js for create static pages.",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -21,7 +21,7 @@
     "url": "https://github.com/olivmonnier/tiny-compilator/issues"
   },
   "dependencies": {
-    "front-matter": "^2.3.0",
+    "front-matter": "^3.0.1",
     "handlebars": "^4.0.12"
   },
   "devDependencies": {
