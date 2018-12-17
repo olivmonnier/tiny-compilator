@@ -21,7 +21,7 @@
     "url": "https://github.com/olivmonnier/tiny-compilator/issues"
   },
   "dependencies": {
-    "front-matter": "^2.3.0",
+    "front-matter": "^3.0.1",
     "handlebars": "^4.0.12"
   },
   "devDependencies": {
