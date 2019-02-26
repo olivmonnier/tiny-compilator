@@ -55,7 +55,7 @@ describe('Compilation works', function () {
       title: 'Hello Everyone'
     });
 
-    expect(page).to.equal('<h1>Hello World</h1><h2>HELLO EVERYONE</h2>');
+    expect(page).to.equal('<h1>Hello World</h1><h2>HELLO EVERYONE</h2><b>test param</b>\n');
     done();
   });
 });
