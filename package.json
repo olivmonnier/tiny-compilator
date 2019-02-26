@@ -1,6 +1,6 @@
 {
   "name": "tiny-compilator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Build your stack with Handlebars.js for create static pages.",
   "main": "index.js",
   "scripts": {
