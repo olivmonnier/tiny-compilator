@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "front-matter": "^3.0.1",
-    "handlebars": "^4.0.12"
+    "handlebars": "^4.1.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
