@@ -1,6 +1,6 @@
 # tiny-compilator
 
-![release](https://img.shields.io/badge/release-1.0.5-blue.svg)
+![release](https://img.shields.io/badge/release-1.0.6-blue.svg)
 [![travis](https://travis-ci.org/olivmonnier/tiny-compilator.svg)](https://travis-ci.org/olivmonnier/tiny-compilator)
 
 Build your stack with Handlebars.js for create static pages.
@@ -8,7 +8,7 @@ Build your stack with Handlebars.js for create static pages.
 ## How to install
 
 ```terminal
-npm install tiny-compilator
+npm install tiny-compilator handlebars
 ```
 
 ## How it works
