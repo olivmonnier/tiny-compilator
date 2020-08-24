@@ -1,5 +1,5 @@
 const Handlebars = require("handlebars");
-const fm = require("front-matter");
+const matter = require("gray-matter");
 const fs = require("fs");
 const path = require("path");
 const loadFiles = require("./lib/loadFiles");
@@ -80,11 +80,11 @@ class Compilator {
 
     file = fs.readFileSync(file, "utf8");
 
-    const page = fm(file);
-    const options = page.attributes;
+    const page = matter(file);
+    const options = page.data;
     const layoutPage = options.layout || "default";
     const layoutTemplate = this.layouts[layoutPage];
-    const pageTemplate = this.Handlebars.compile(page.body + "\n");
+    const pageTemplate = this.Handlebars.compile(page.content + "\n");
 
     this.Handlebars.registerPartial("body", pageTemplate);
 
