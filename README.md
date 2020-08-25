@@ -1,6 +1,6 @@
 # tiny-compilator
 
-![release](https://img.shields.io/badge/release-1.0.7-blue.svg)
+![release](https://img.shields.io/badge/release-1.0.8-blue.svg)
 [![travis](https://travis-ci.org/olivmonnier/tiny-compilator.svg)](https://travis-ci.org/olivmonnier/tiny-compilator)
 
 Build your stack with Handlebars.js for create static pages.
@@ -13,15 +13,15 @@ npm install tiny-compilator handlebars
 
 ## How it works
 
-Create a Compilator instance with in arguments the paths of layouts, helpers & partials folders. Then call render method of your instance with the path of your page and data to pass:
+Create a Compilator instance with in arguments the paths (glob pattern is available) of layouts, helpers & partials folders. Then call render method of your instance with the path of your page and data to pass:
 
 ```javascript
 const Compilator = require("tiny-compilator");
 
 const compile = new Compilator({
-  helpers: "path/to/helper/folder",
+  helpers: "path/to/helper/folder/**/*.js",
   layouts: "path/to/layout/folder",
-  partials: "path/to/partials/folder",
+  partials: "path/to/partials/folder/**",
 });
 
 compile.render("path/to/your/page", data); //=> return html compiled

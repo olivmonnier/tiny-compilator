@@ -42,8 +42,7 @@ class Compilator {
     const helpers = loadFiles(this.options.helpers);
 
     helpers.forEach((helper) => {
-      const helperPath = path.join(process.cwd(), this.options.helpers, helper);
-      const h = require(helperPath);
+      const h = require(helper);
 
       this.Handlebars.registerHelper(path.basename(helper, ".js"), h);
     });

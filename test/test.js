@@ -48,8 +48,8 @@ describe('Compilation works', function () {
   it('return html elements after run render method', function (done) {
     var c = new Compilator({
       helpers: 'test/fixtures/helpers',
-      layouts: 'test/fixtures/layouts/',
-      partials: 'test/fixtures/partials/'
+      layouts: 'test/fixtures/layouts/**',
+      partials: 'test/fixtures/partials/**'
     });
     var page = c.render('test/fixtures/pages/test.hbs', {
       title: 'Hello Everyone'
