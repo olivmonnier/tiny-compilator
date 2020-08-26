@@ -1,6 +1,6 @@
 # tiny-compilator
 
-![release](https://img.shields.io/badge/release-1.0.8-blue.svg)
+![release](https://img.shields.io/badge/release-1.0.9-blue.svg)
 [![travis](https://travis-ci.org/olivmonnier/tiny-compilator.svg)](https://travis-ci.org/olivmonnier/tiny-compilator)
 
 Build your stack with Handlebars.js for create static pages.

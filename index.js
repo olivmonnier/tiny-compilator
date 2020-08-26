@@ -72,9 +72,9 @@ class Compilator {
   /**
    *
    * @param {string} file - path to page
-   * @param {Object} datas
+   * @param {Object} data
    */
-  render(file, datas) {
+  render(file, data) {
     if (!file) return;
 
     file = fs.readFileSync(file, "utf8");
@@ -87,7 +87,7 @@ class Compilator {
 
     this.Handlebars.registerPartial("body", pageTemplate);
 
-    return layoutTemplate({ ...datas, options });
+    return layoutTemplate({ ...options, ...data });
   }
 }
 
